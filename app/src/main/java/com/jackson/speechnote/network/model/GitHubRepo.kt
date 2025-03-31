@@ -1,4 +1,4 @@
-package com.jackson.networkapp.network.model
+package com.jackson.speechnote.network.model
 
 import com.google.gson.annotations.SerializedName
 

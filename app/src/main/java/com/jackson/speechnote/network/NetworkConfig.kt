@@ -1,7 +1,7 @@
-package com.jackson.networkapp.network
+package com.jackson.speechnote.network
 
 import android.content.Context
-import com.jackson.networkapp.network.di.NetworkModule
+import com.jackson.speechnote.network.di.NetworkModule
 
 /**
  * 网络配置类

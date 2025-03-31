@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.jackson.networkapp"
+    namespace = "com.jackson.speechnote"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.jackson.networkapp"
+        applicationId = "com.jackson.speechnote"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -1,6 +1,6 @@
-package com.jackson.networkapp.network.api
+package com.jackson.speechnote.network.api
 
-import com.jackson.networkapp.network.model.ApiResponse
+import com.jackson.speechnote.network.model.ApiResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

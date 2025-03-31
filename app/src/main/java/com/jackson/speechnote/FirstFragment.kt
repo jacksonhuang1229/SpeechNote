@@ -1,11 +1,11 @@
-package com.jackson.networkapp
+package com.jackson.speechnote
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jackson.networkapp.databinding.FragmentFirstBinding
+import com.jackson.speechnote.databinding.FragmentFirstBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.

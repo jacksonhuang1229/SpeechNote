@@ -1,15 +1,15 @@
-package com.jackson.networkapp.network
+package com.jackson.speechnote.network
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.jackson.networkapp.network.api.Repository
-import com.jackson.networkapp.network.api.Result
-import com.jackson.networkapp.network.api.safeApiCall
-import com.jackson.networkapp.network.model.ApiResponse
-import com.jackson.networkapp.network.model.GitHubRepo
+import com.jackson.speechnote.network.api.Repository
+import com.jackson.speechnote.network.api.Result
+import com.jackson.speechnote.network.api.safeApiCall
+import com.jackson.speechnote.network.model.ApiResponse
+import com.jackson.speechnote.network.model.GitHubRepo
 import kotlinx.coroutines.launch
 
 /**

@@ -1,8 +1,8 @@
-package com.jackson.networkapp.network.di
+package com.jackson.speechnote.network.di
 
-import com.jackson.networkapp.network.NetworkConfig
-import com.jackson.networkapp.network.api.ApiService
-import com.jackson.networkapp.network.api.GitHubApiService
+import com.jackson.speechnote.network.NetworkConfig
+import com.jackson.speechnote.network.api.ApiService
+import com.jackson.speechnote.network.api.GitHubApiService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient

@@ -1,4 +1,4 @@
-package com.jackson.networkapp.network.api
+package com.jackson.speechnote.network.api
 
 import retrofit2.Response
 import java.io.IOException

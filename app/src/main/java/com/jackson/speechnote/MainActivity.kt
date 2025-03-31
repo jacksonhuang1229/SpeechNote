@@ -1,4 +1,4 @@
-package com.jackson.networkapp
+package com.jackson.speechnote
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,9 +12,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.jackson.networkapp.databinding.ActivityMainBinding
-import com.jackson.networkapp.network.MainViewModel
-import com.jackson.networkapp.network.api.Result
+import com.jackson.speechnote.databinding.ActivityMainBinding
+import com.jackson.speechnote.network.MainViewModel
+import com.jackson.speechnote.network.api.Result
 
 class MainActivity : AppCompatActivity() {
 

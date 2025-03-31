@@ -1,8 +1,8 @@
-package com.jackson.networkapp.network.api
+package com.jackson.speechnote.network.api
 
-import com.jackson.networkapp.network.di.NetworkModule
-import com.jackson.networkapp.network.model.ApiResponse
-import com.jackson.networkapp.network.model.GitHubRepo
+import com.jackson.speechnote.network.di.NetworkModule
+import com.jackson.speechnote.network.model.ApiResponse
+import com.jackson.speechnote.network.model.GitHubRepo
 import retrofit2.Response
 
 /**

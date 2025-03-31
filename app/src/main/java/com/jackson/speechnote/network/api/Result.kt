@@ -1,4 +1,4 @@
-package com.jackson.networkapp.network.api
+package com.jackson.speechnote.network.api
 
 /**
  * 用于封装网络请求结果的密封类

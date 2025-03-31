@@ -1,4 +1,4 @@
-package com.jackson.networkapp
+package com.jackson.speechnote
 
 import android.os.Bundle
 import android.util.Log
@@ -7,10 +7,10 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.jackson.networkapp.databinding.ActivityRepoListBinding
-import com.jackson.networkapp.network.MainViewModel
-import com.jackson.networkapp.network.api.Result
-import com.jackson.networkapp.network.model.GitHubRepo
+import com.jackson.speechnote.databinding.ActivityRepoListBinding
+import com.jackson.speechnote.network.MainViewModel
+import com.jackson.speechnote.network.api.Result
+import com.jackson.speechnote.network.model.GitHubRepo
 
 class RepoListActivity : AppCompatActivity() {
     

@@ -1,4 +1,4 @@
-package com.jackson.networkapp
+package com.jackson.speechnote
 
 import org.junit.Test
 
