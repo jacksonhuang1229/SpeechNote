@@ -35,6 +35,11 @@ class FirstFragment : Fragment() {
             val intent = android.content.Intent(requireContext(), RepoListActivity::class.java)
             startActivity(intent)
         }
+        
+        binding.buttonRecord.setOnClickListener {
+            val intent = android.content.Intent(requireContext(), RecordActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroyView() {
