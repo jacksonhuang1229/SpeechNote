@@ -31,7 +31,7 @@ class RecordActivity : AppCompatActivity() {
         binding = ActivityRecordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 確保錄音文件目錄存在
+        // 確保錄音檔案目錄存在
         val audioDir = File(externalCacheDir, "audio").apply { 
             if (!exists()) mkdirs() 
         }
@@ -64,10 +64,8 @@ class RecordActivity : AppCompatActivity() {
         try {
             mediaRecorder = MediaRecorder().apply {
                 setAudioSource(MediaRecorder.AudioSource.MIC)
-                setOutputFormat(MediaRecorder.OutputFormat.MPEG_4) // 改用 MPEG_4 格式
-                setAudioEncoder(MediaRecorder.AudioEncoder.AAC)    // 使用 AAC 編碼
-                setAudioEncodingBitRate(128000)                   // 設置比特率
-                setAudioSamplingRate(44100)                       // 設置採樣率
+                setOutputFormat(MediaRecorder.OutputFormat.AMR_NB)
+                setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
                 setOutputFile(audioFilePath)
                 
                 try {
@@ -78,13 +76,16 @@ class RecordActivity : AppCompatActivity() {
                     binding.chronometer.base = SystemClock.elapsedRealtime()
                     binding.chronometer.start()
                     Toast.makeText(this@RecordActivity, "開始錄音", Toast.LENGTH_SHORT).show()
+                    android.util.Log.d("RecordActivity", "錄音開始，檔案路徑: $audioFilePath")
                 } catch (e: IOException) {
                     e.printStackTrace()
+                    android.util.Log.e("RecordActivity", "錄音準備失敗: ${e.message}")
                     Toast.makeText(this@RecordActivity, "錄音準備失敗: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         } catch (e: Exception) {
             e.printStackTrace()
+            android.util.Log.e("RecordActivity", "錄音初始化失敗: ${e.message}")
             Toast.makeText(this, "錄音初始化失敗: ${e.message}", Toast.LENGTH_SHORT).show()
         }
         updateButtonStates()
@@ -100,9 +101,19 @@ class RecordActivity : AppCompatActivity() {
             isRecording = false
             binding.btnRecord.text = "開始錄音"
             binding.chronometer.stop()
-            Toast.makeText(this, "錄音已保存", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "錄音已儲存", Toast.LENGTH_SHORT).show()
+            android.util.Log.d("RecordActivity", "錄音已儲存到: $audioFilePath")
+            
+            // 檢查檔案是否存在和大小
+            val file = File(audioFilePath.toString())
+            if (file.exists()) {
+                android.util.Log.d("RecordActivity", "錄音檔案大小: ${file.length()} bytes")
+            } else {
+                android.util.Log.e("RecordActivity", "錄音檔案不存在")
+            }
         } catch (e: Exception) {
             e.printStackTrace()
+            android.util.Log.e("RecordActivity", "停止錄音失敗: ${e.message}")
             Toast.makeText(this, "停止錄音失敗: ${e.message}", Toast.LENGTH_SHORT).show()
         }
         updateButtonStates()
